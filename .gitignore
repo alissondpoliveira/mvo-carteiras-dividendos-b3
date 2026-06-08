@@ -1,0 +1,43 @@
+# Dados de preços — não versionar (pode ser proprietário)
+precos_b3.csv
+dados/*.csv
+dados/*.xlsx
+
+# Outputs gerados pelos scripts
+comparacao_carteiras.xlsx
+backtest_benchmark.xlsx
+monte_carlo.xlsx
+resultado_carteira.xlsx
+outputs/*.xlsx
+outputs/*.csv
+outputs/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user

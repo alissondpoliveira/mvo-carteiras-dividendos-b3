@@ -1,0 +1,113 @@
+{
+  "data_referencia": "2026-06-01",
+  "foco": "Carteiras de DIVIDENDOS das principais casas brasileiras — junho 2026",
+  "observacoes": "Pesos = alocacao recomendada pela instituicao. Todas as carteiras sao de dividendos.",
+  "fontes": {
+    "XP_Div": "Money Times 02/06/2026 - Carteira Top Dividendos Plus XP Junho 2026",
+    "BTG_Div": "Money Times 01/06/2026 - Carteira Dividendos BTG Pactual Junho 2026",
+    "Itau_Div": "Money Times 04/06/2026 - Carteira Dividendos Itau BBA junho 2026",
+    "Santander_Div": "PDF Santander Carteira Dividendos Jun26 (investimentos.santander.com.br)",
+    "BB_Div": "Money Times 02/06/2026 - Carteira Dividendos BB Investimentos Junho 2026"
+  },
+  "carteiras": {
+    "XP Dividendos": {
+      "nome": "XP Top Dividendos Plus",
+      "data": "2026-06-01",
+      "status": "completo",
+      "num_ativos": 11,
+      "alteracoes_junho": ["SAIU SANB11", "ENTROU AXIA3"],
+      "ativos": {
+        "PETR4":  0.10,
+        "PRIO3":  0.05,
+        "VALE3":  0.125,
+        "CPLE3":  0.15,
+        "ENGI11": 0.05,
+        "AXIA3":  0.10,
+        "VIVT3":  0.05,
+        "ALOS3":  0.075,
+        "B3SA3":  0.10,
+        "CXSE3":  0.05,
+        "ITUB4":  0.15
+      },
+      "notas": "Total = 100%. Tabela original Money Times tinha AXIA7+AXIA3 (5%+5%) — AXIA7 nao existe como ticker B3; consolidado como AXIA3 10%. Carteira quantitativa focada em dividend yield atrativo e crescimento."
+    },
+    "BTG Dividendos": {
+      "nome": "BTG Pactual Carteira Dividendos",
+      "data": "2026-06-01",
+      "status": "completo",
+      "num_ativos": 12,
+      "alteracoes_junho": ["SAIU VBBR3", "ENTROU CXSE3", "ALOS3 e MOTV3 reduzidos", "CURY3 dobrado"],
+      "ativos": {
+        "PETR4": 0.10,
+        "ITUB4": 0.10,
+        "VALE3": 0.05,
+        "BBDC4": 0.10,
+        "AXIA3": 0.10,
+        "EQTL3": 0.10,
+        "CPLE3": 0.10,
+        "CXSE3": 0.10,
+        "MOTV3": 0.05,
+        "CSMG3": 0.05,
+        "ALOS3": 0.05,
+        "CURY3": 0.10
+      },
+      "notas": "Total = 100%. Foco em geracao consistente de caixa e distribuicao sustentavel de proventos. Dividend yields projetados: ALOS3 12.2%, PETR4 9.7%, BBDC4 9.7%, VALE3 8.7%, CXSE3 8.2%."
+    },
+    "Itau BBA Div.": {
+      "nome": "Itau BBA Carteira Dividendos",
+      "data": "2026-06-01",
+      "status": "completo",
+      "num_ativos": 5,
+      "ativos": {
+        "AXIA3": 0.20,
+        "ALOS3": 0.20,
+        "BBDC4": 0.20,
+        "VALE3": 0.20,
+        "PETR4": 0.20
+      },
+      "notas": "Carteira mantida sem alteracoes para junho. Pesos iguais de 20% cada. Foco em dividendos e perfil defensivo. Dividend yields projetados 2026: AXIA3 9.3%, ALOS3 13.6%, BBDC4 7.0%, VALE3 6.1%, PETR4 12.1%."
+    },
+    "Santander Div.": {
+      "nome": "Santander Carteira Dividendos",
+      "data": "2026-06-01",
+      "status": "completo",
+      "num_ativos": 10,
+      "ativos": {
+        "ALOS3":  0.10,
+        "AXIA6":  0.10,
+        "BPAC11": 0.10,
+        "CPLE3":  0.10,
+        "VIVT3":  0.10,
+        "VALE3":  0.10,
+        "VBBR3":  0.10,
+        "CURY3":  0.10,
+        "ITUB4":  0.10,
+        "PETR3":  0.10
+      },
+      "notas": "Pesos assumidos como iguais (10% cada) — PDF nao apresenta pesos individuais. AXIA6 sera substituido por AXIA3 na analise (mesma empresa, PN vs ON). Carteira de longo prazo, inicio 03/01/2011. Beta 1.05."
+    },
+    "BB Dividendos": {
+      "nome": "BB Investimentos Carteira Dividendos",
+      "data": "2026-06-01",
+      "status": "completo",
+      "num_ativos": 10,
+      "alteracoes_junho": [
+        "SAIU CMIG4, CPLE3, KLBN11, POMO4, PSSA3, UNIP6, VULC3",
+        "ENTROU ALOS3, ABEV3, BBDC4, CXSE3, ITSA4, TAEE11, TIMS3"
+      ],
+      "ativos": {
+        "ALOS3":  0.10,
+        "ABEV3":  0.10,
+        "BBDC4":  0.10,
+        "BRAP4":  0.10,
+        "CXSE3":  0.10,
+        "DIRR3":  0.10,
+        "ITSA4":  0.10,
+        "PETR4":  0.10,
+        "TAEE11": 0.10,
+        "TIMS3":  0.10
+      },
+      "notas": "Total = 100%. Rotacao significativa vs maio (7 trocas). Metodologia multifatorial: historico de proventos, expectativa futura, valuation, analise tatica. Dividend yields esperados: ALOS3 11.9%, PETR4 10.4%, TAEE11 10.1%, TIMS3 9.5%, ITSA4 9.4%."
+    }
+  }
+}
