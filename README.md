@@ -1,6 +1,6 @@
-# Otimização de Markowitz — Carteiras de Dividendos B3
+# Otimizador de Máximo Sharpe — Carteiras de Dividendos B3
 
-> Apliquei otimização de Markowitz (Max Sharpe) às carteiras de dividendos publicadas pelas principais casas de análise brasileiras em junho de 2026. O modelo perdeu. O motivo importa mais que o resultado.
+> Apliquei otimização de máximo Sharpe às carteiras de dividendos publicadas por casas de análise brasileiras em junho de 2022. O resultado foi assimétrico entre as carteiras, e o mecanismo que explica a inversão importa mais que o número.
 
 **Artigo completo:** [LinkedIn — *ETFs no Brasil em 2025: crescimento real, causas ainda indetermináveis*](#) *(link será atualizado após publicação)*
 
@@ -87,9 +87,9 @@ Carteiras de dividendos publicadas em junho de 2026. Fonte: Money Times (01–04
 |---|---|---|
 | Casa A | 11 | CPLE3 15%, ITUB4 15%, VALE3 12,5% |
 | Casa B | 12 | Pesos entre 5% e 10% |
-| Itaú BBA | 5 | Pesos iguais 20%: AXIA3, ALOS3, BBDC4, VALE3, PETR4 |
-| Santander | 10 | Pesos iguais 10% |
-| BB Investimentos | 10 | Pesos iguais 10% |
+| Casa C | 5 | Pesos iguais 20% |
+| Casa D | 10 | Pesos iguais 10% |
+| Casa E | 10 | Pesos iguais 10% |
 
 Detalhes completos em `dados/Carteiras/carteiras_jun2026.json`.
 
@@ -171,9 +171,9 @@ $$\text{IR} = \frac{\overline{r_p - r_b}}{\text{TE}}, \qquad \text{TE} = \sigma(
 | **IBOV** | 23,9% | 0,57 | — | — |
 | Casa A | 31,6% | 0,98 | 1,52 | +7,6% |
 | Casa B | 28,7% | 0,77 | 0,98 | +4,4% |
-| **Itaú BBA Div.** | **35,2%** | **1,16** | **1,63** | **+11,4%** |
-| Santander Div. | 33,9% | 1,03 | 1,59 | +9,3% |
-| BB Dividendos | 26,6% | 0,74 | 0,92 | +3,4% |
+| **Casa C** | **35,2%** | **1,16** | **1,63** | **+11,4%** |
+| Casa D | 33,9% | 1,03 | 1,59 | +9,3% |
+| Casa E | 26,6% | 0,74 | 0,92 | +3,4% |
 
 ### Bootstrap Backtest — 500 Splits Aleatórios (Sharpe OOS mediano)
 
@@ -181,9 +181,9 @@ $$\text{IR} = \frac{\overline{r_p - r_b}}{\text{TE}}, \qquad \text{TE} = \sigma(
 |---|---|---|---|---|---|
 | Casa A | 0,911 | 2,153 | 0,591 | −0,284 | ❌ Não |
 | Casa B | 0,250 | 2,537 | 0,250 | +0,043 | ⚠ Inconclusivo |
-| Itaú BBA | 0,470 | 3,007 | 0,273 | −0,287 | ❌ Não |
-| Santander | 0,496 | 2,572 | 0,377 | −0,163 | ❌ Não |
-| BB Investimentos | 0,369 | 1,909 | 0,164 | −0,298 | ❌ Não |
+| Casa C | 0,470 | 3,007 | 0,273 | −0,287 | ❌ Não |
+| Casa D | 0,496 | 2,572 | 0,377 | −0,163 | ❌ Não |
+| Casa E | 0,369 | 1,909 | 0,164 | −0,298 | ❌ Não |
 
 **Achado central:** Sharpe IS médio $\approx 2{,}5$ → Sharpe OOS mediano $\approx 0{,}3$. Degradação de ~88%. O otimizador clássico com janela curta não agrega valor sistematicamente — maximiza o Sharpe verdadeiro junto com o erro de estimação dos parâmetros.
 
