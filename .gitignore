@@ -41,3 +41,7 @@ desktop.ini
 .idea/
 *.suo
 *.user
+
+# Documentos de entrada (podem conter nomes de casas de análise)
+*.pdf
+Carteiras/*.json

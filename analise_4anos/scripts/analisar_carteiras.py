@@ -2,11 +2,11 @@
 """
 analisar_carteiras.py
 ══════════════════════════════════════════════════════════════════════
-Análise comparativa e otimização de Markowitz para as carteiras
+Análise comparativa e otimização de máximo Sharpe para as carteiras
 DIVIDENDOS de junho 2026 das principais casas brasileiras.
 
-Carteiras: Casa A — Portfólio Concentrado | Casa B | Itaú BBA Dividendos
-           Santander Dividendos   | BB Investimentos Dividendos
+Carteiras: Casa A | Casa B | Casa C | Casa D | Casa E
+
 
 Otimização: Max Sharpe com restrições por ativo
     Σ wᵢ = 1
@@ -16,7 +16,7 @@ Otimização: Max Sharpe com restrições por ativo
 ═══════════════════════════════════════════════════════════════════════
 DISCLAIMERS:
   • Análise retroativa (backward-looking) – NÃO é recomendação de invest.
-  • Otimização Markowitz sofre de maximização de erro de estimação.
+  • Otimizador de máximo Sharpe sujeito a maximização de erro de estimação.
   • Correlações sobem em crises, reduzindo a diversificação quando mais importa.
   • Desempenho passado não é garantia de desempenho futuro.
   • Dados: snapshot estático de preços ajustados – não executa chamadas de API.
@@ -88,16 +88,16 @@ CARTEIRAS = {
         "ALOS3": 0.05,
         "CURY3": 0.10,
     },
-    "Itaú BBA Div.": {
-        # Itaú BBA Carteira Dividendos — junho 2026
+    "Casa C": {
+        # Casa C — Carteira Dividendos
         "AXIA3": 0.20,
         "ALOS3": 0.20,
         "BBDC4": 0.20,
         "VALE3": 0.20,
         "PETR4": 0.20,
     },
-    "Santander Div.": {
-        # Santander Carteira Dividendos — junho 2026
+    "Casa D": {
+        # Casa D — Carteira Dividendos
         # AXIA6 → substituído por AXIA3 (mesma empresa, PN vs ON)
         "ALOS3":  0.10,
         "AXIA6":  0.10,   # → substituído por AXIA3
@@ -110,8 +110,8 @@ CARTEIRAS = {
         "ITUB4":  0.10,
         "PETR3":  0.10,
     },
-    "BB Dividendos": {
-        # BB Investimentos Carteira Dividendos — junho 2026
+    "Casa E": {
+        # Casa E — Carteira Dividendos
         # Fonte: Money Times 02/06/2026 (7 trocas vs maio)
         "ALOS3":  0.10,
         "ABEV3":  0.10,
@@ -152,9 +152,9 @@ C_ORANGE  = "C55A11"
 CORES_CARTEIRAS = {
     "Casa A":   "C55A11",
     "Casa B":  "17375E",
-    "Itaú BBA Div.":   "1E5799",
-    "Santander Div.":  "C00000",
-    "BB Dividendos":   "375623",
+    "Casa C":   "1E5799",
+    "Casa D":  "C00000",
+    "Casa E":   "375623",
 }
 
 def fill(hex_color):
@@ -457,7 +457,7 @@ R += 1
 
 # ── Disclaimer ─────────────────────────────────────────────────────
 disc = ("⚠ Análise retroativa (backward-looking) · NÃO constitui recomendação de investimento · "
-        "Otimização Markowitz sujeita a maximização de erro de estimação · Dados: preços ajustados (snapshot estático)")
+        "Otimização de máximo Sharpe sujeita a maximização de erro de estimação · Dados: preços ajustados (snapshot estático)")
 sv(ws, R, 1, disc)
 ws.merge_cells(start_row=R, start_column=1, end_row=R, end_column=1 + N * 2)
 ws.row_dimensions[R].height = 30
@@ -717,7 +717,7 @@ disc_full = [
     ("DISCLAIMERS E LIMITAÇÕES METODOLÓGICAS", True, C_NAVY),
     ("", False, C_WHITE),
     ("1. NATUREZA DA ANÁLISE", True, C_TEAL),
-    ("Esta planilha é de natureza exclusivamente educacional e demonstrativa. Não constitui recomendação, oferta ou solicitação de compra ou venda de valores mobiliários. O objetivo é ilustrar conceitos de otimização de portfólio (Markowitz/Mean-Variance) e análise de risco quantitativo.", False, C_WHITE),
+    ("Esta planilha é de natureza exclusivamente educacional e demonstrativa. Não constitui recomendação, oferta ou solicitação de compra ou venda de valores mobiliários. O objetivo é ilustrar conceitos de otimização de portfólio (Mean-Variance) e análise de risco quantitativo.", False, C_WHITE),
     ("", False, C_WHITE),
     ("2. DADOS HISTÓRICOS", True, C_TEAL),
     ("Toda a análise é retroativa (backward-looking). Os retornos, volatilidades, correlações e métricas de risco são calculados sobre preços ajustados históricos e refletem o passado, não o futuro. Desempenho passado não é garantia nem estimativa confiável de desempenho futuro.", False, C_WHITE),

@@ -57,12 +57,12 @@ CARTEIRAS = {
     "Itau BBA Div.": {
         "AXIA3":0.20,"ALOS3":0.20,"BBDC4":0.20,"VALE3":0.20,"PETR4":0.20,
     },
-    "Santander Div.": {
+    "Casa D": {
         "ALOS3":0.10,"AXIA3":0.10,"BPAC11":0.10,"CPLE3":0.10,
         "VIVT3":0.10,"VALE3":0.10,"VBBR3":0.10,"CURY3":0.10,
         "ITUB4":0.10,"PETR3":0.10,
     },
-    "BB Dividendos": {
+    "Casa E": {
         "ALOS3":0.10,"ABEV3":0.10,"BBDC4":0.10,"BRAP4":0.10,
         "CXSE3":0.10,"DIRR3":0.10,"ITSA4":0.10,"PETR4":0.10,
         "TAEE11":0.10,"TIMS3":0.10,
@@ -73,8 +73,8 @@ CORES = {
     "Casa A":  "C55A11",
     "Casa B": "17375E",
     "Itau BBA Div.":  "1E5799",
-    "Santander Div.": "C00000",
-    "BB Dividendos":  "375623",
+    "Casa D": "C00000",
+    "Casa E":  "375623",
     "DIVO11":         "7030A0",
     "IBOV":           "404040",
 }
